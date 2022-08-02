@@ -48,6 +48,7 @@ def edit():
     return response, 400
 
   user.email = req["new_email"]
+  db.session.commit()
   return response, 200
 
 
