@@ -11,7 +11,7 @@ function App() {
   const handleNameChange = e => setUsername(e.target.value);
 
   const login = async () => {
-    const url = "http://localhost:5000/profile/" + username;
+    const url = "http://server/profile/" + username;
 
     const response = await fetch(url);
     if(response.status === 200) {
@@ -21,7 +21,7 @@ function App() {
   }
 
   const changeMail = async(new_email) => {
-    const url = "http://localhost:5000/edit";
+    const url = "http://server/edit";
   
     const response = await fetch(url, {
       method: 'POST',

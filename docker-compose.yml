@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  server:
+    build: ./server
+    ports:
+    - "8080:5000"
+    volumes:
+    - ./server:/app
+    environment:
+      FLASK_ENV: development
+    depends_on:
+    - db
+  web:
+    build: ./client
+    ports:
+    - "3000:3000"
+    volumes:
+    - ./client:/user/src/app
+    depends_on:
+    - server
+  db:
+    image: postgres
+    environment:
+        - POSTGRES_USER=ayomi
+        - POSTGRES_PASSWORD=ayomi
+        - POSTGRES_DB=ayomi
+    ports:
+    - "81:5432"
+    volumes:
+    - ./server/db:/var/lib/postgresql/data
