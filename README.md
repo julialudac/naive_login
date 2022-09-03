@@ -9,4 +9,4 @@ You can connect to
 * The client at localhost:3000
 
 The docker container of the server may be exited if the database is not ready. To run it:
-`docker start ayomi_server_1`
+`docker start naive_server_1`
