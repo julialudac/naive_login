@@ -10,3 +10,8 @@ You can connect to
 
 The docker container of the server may be exited if the database is not ready. To run it:
 `docker start naive_server_1`
+
+
+# Content I can inspire from
+* Uses react
+* Open kind of a modal in the middle of the page
